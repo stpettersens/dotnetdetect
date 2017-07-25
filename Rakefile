@@ -18,3 +18,16 @@ task :upx => [:default] do
     end
     sh "upx -9 #{tp} -o #{target}"
 end
+
+task :clean do
+    if File.exists?(target) then
+        File.delete(target)
+    end
+    sh "cargo clean"
+end
+
+task :cleanlock do 
+    if File.exists?("Cargo.lock") then
+        File.delete("Cargo.lock")
+    end
+end
