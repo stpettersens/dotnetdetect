@@ -8,8 +8,8 @@
 Prerequisties to build are:
 * [Rust tools](https://www.rust-lang.org) (rustc, cargo, etc).
 
-* [Ruby](https://www.ruby-lang.org), [Rake](https://ruby.github.io/rake/), [gems](https://rubygems.org/pages/download) and [OS gem](https://rubygems.org/gems/os) (optional)
-or  [Rake in Rust](https://github.com/stpettersens/rakeinrust).
+* [Ruby](https://www.ruby-lang.org), [Rake](https://ruby.github.io/rake/), [gems](https://rubygems.org/pages/download) and [OS gem](https://rubygems.org/gems/os)
+or  [Rake in Rust](https://github.com/stpettersens/rakeinrust) (optional).
 
 * [UPX](https://upx.github.io) (optional).
 
