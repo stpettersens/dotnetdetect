@@ -50,7 +50,7 @@ fn is_required_dotnet(req: f32, verbose: bool) {
     if ver >= req {
         if verbose {
             println!("Meets or exceeds required version => {}", req);
-            ec = 1;
+            ec = 0;
         }
     } else {
         println!("Does not meet required version => {}", ver);
@@ -67,7 +67,7 @@ fn display_usage(program: &str) {
     println!("\nUsage: {} [-h | -v][-r <dotnet version>][-q]", program);
     println!("\nOptions are:\n");
     println!("-r | --required: The required minimal .NET version.");
-    println!("-q | --quiet: Do not output version to stdout; just exit code (1 for pass; -1 for fail).");
+    println!("-q | --quiet: Do not output version to stdout; just exit code (0 for pass; -1 for fail).");
     println!("-h | --help: Display this usage information and exit.");
     println!("-v | --version: Display program version information and exit.");
     exit(0);

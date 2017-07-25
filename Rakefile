@@ -19,6 +19,14 @@ task :upx => [:default] do
     sh "upx -9 #{tp} -o #{target}"
 end
 
+task :test do
+    sh "#{target} --help"
+    puts ""
+    sh "#{target}"
+    puts ""
+    sh "#{target} --required 4.5"
+end
+
 task :clean do
     if File.exists?(target) then
         File.delete(target)
