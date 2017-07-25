@@ -30,7 +30,11 @@ fn detect_dotnet_version(verbose: bool) -> f32 {
         _ => ver = 4.4,
     }
     if verbose {
-        println!("Detected .NET Framework => v{}", ver);
+        let msg = "Detected .NET Framework =>";
+        if ver == 4.4 {
+            println!("{} < 4.5", msg);
+        }
+        println!("{} v{}", msg, ver);
     }
     ver
 }
