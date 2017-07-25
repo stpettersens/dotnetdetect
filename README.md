@@ -1,7 +1,7 @@
 ### dotnetdetect
 > :sparkles: Small utility to detect version of .NET Framework installed on a Windows system.
 
-<!--![Build status](https://ci.appveyor.com/api/projects/status/1ekayunrux3ise2m?svg=true)](https://ci.appveyor.com/project/stpettersens/dotnetdetect)-->
+[![Build status](https://ci.appveyor.com/api/projects/status/r1jjy8w5xg74soho?svg=true)](https://ci.appveyor.com/project/stpettersens/dotnetdetect)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/stpettersens/dotnetdetect/blob/master/LICENSE)
 
 #### Building from source
