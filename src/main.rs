@@ -26,7 +26,7 @@ fn detect_dotnet_version(verbose: bool) -> f32 {
         394254 | 394271 => ver = 4.61,
                  379893 => ver = 4.52,
         378675 | 378758 => ver = 4.51,
-        37839 => ver = 4.5,
+        378389 => ver = 4.5,
         _ => ver = 4.4,
     }
     if verbose {
