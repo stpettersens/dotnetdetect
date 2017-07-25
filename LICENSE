@@ -1,4 +1,6 @@
-MIT License
+dotnetdetect
+Small utility to detect version of .NET Framework
+installed on a Windows system.
 
 Copyright (c) 2017 Sam Saint-Pettersen
 
