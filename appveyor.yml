@@ -15,7 +15,7 @@ test_script:
   - rake upx
   - rake test
 
-after_script:
+after_test:
   - rake shouldfail
 
 build: off
