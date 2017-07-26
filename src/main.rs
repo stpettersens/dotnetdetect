@@ -53,7 +53,7 @@ fn is_required_dotnet(req: f32, verbose: bool) {
             ec = 0;
         }
     } else if verbose {
-        println!("Does not meet required version => {}", ver);
+        println!("Does not meet required version => {}", req);
     }
     exit(ec);
 }
