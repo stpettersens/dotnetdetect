@@ -27,6 +27,7 @@ Options are:
 
 -r | --required: The required minimal .NET version.
 -q | --quiet: Do not output version to stdout; just exit code (0 for pass; -1 for fail).
+-p | --part-quiet: Output version to stdout, but not "Meets..." message.
 -h | --help: Display this usage information and exit.
 -v | --version: Display program version information and exit.
 ```
