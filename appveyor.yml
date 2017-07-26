@@ -14,7 +14,7 @@ install:
 test_script:
   - rake upx
   - rake test
-  
+
 after_script:
   - rake shouldfail
 
