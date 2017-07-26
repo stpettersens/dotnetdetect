@@ -14,5 +14,6 @@ install:
 test_script:
   - rake upx
   - rake test
+  - rake shouldfail
 
 build: off

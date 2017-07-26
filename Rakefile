@@ -25,6 +25,11 @@ task :test do
     sh "#{target}"
     puts ""
     sh "#{target} --required 4.5"
+    puts ""
+end
+
+task :shouldfail do
+    sh "#{target} --required 5.5"
 end
 
 task :clean do
