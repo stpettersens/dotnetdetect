@@ -44,18 +44,18 @@ fn display_version() {
     exit(0);
 }
 
-fn is_required_dotnet(req: f32, verbose: u32) {
-    let mut ec = -1;
+fn is_required_dotnet(req: f32, verbose: u32) -> i32 {
+    let mut ec = -1 as i32;
     let ver = detect_dotnet_version(verbose);
     if ver >= req {
         if verbose > 1 {
             println!("Meets or exceeds required version => {}", req);
-            ec = 0;
         }
+        ec = 0;
     } else if verbose > 1 {
         println!("Does not meet required version => {}", req);
     }
-    exit(ec);
+    ec
 }
 
 fn display_usage(program: &str) {
@@ -88,6 +88,7 @@ fn main() {
     let program = cli.get_program();
     let mut required = String::new();
     let mut verbose = 2;
+    let ec: i32;
     if cli.get_num() > 1 {
         for (i, a) in cli.get_args().iter().enumerate() {
             match a.trim() {
@@ -99,8 +100,10 @@ fn main() {
                 _ => continue,
             }
         }
-        is_required_dotnet(parse_unit(&required), verbose);
+        ec = is_required_dotnet(parse_unit(&required), verbose);
+        exit(ec);
+    } else {
+        detect_dotnet_version(verbose);
+        exit(0);
     }
-    detect_dotnet_version(verbose);
-    exit(0);
 }
