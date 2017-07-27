@@ -88,7 +88,6 @@ fn main() {
     let program = cli.get_program();
     let mut required = String::new();
     let mut verbose = 2;
-    let ec: i32;
     if cli.get_num() > 1 {
         for (i, a) in cli.get_args().iter().enumerate() {
             match a.trim() {
@@ -100,7 +99,7 @@ fn main() {
                 _ => continue,
             }
         }
-        ec = is_required_dotnet(parse_unit(&required), verbose);
+        let ec = is_required_dotnet(parse_unit(&required), verbose);
         exit(ec);
     }
     detect_dotnet_version(verbose);
