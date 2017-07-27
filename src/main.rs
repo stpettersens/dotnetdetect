@@ -102,8 +102,7 @@ fn main() {
         }
         ec = is_required_dotnet(parse_unit(&required), verbose);
         exit(ec);
-    } else {
-        detect_dotnet_version(verbose);
-        exit(0);
     }
+    detect_dotnet_version(verbose);
+    exit(0);
 }
