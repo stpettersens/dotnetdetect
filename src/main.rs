@@ -39,11 +39,6 @@ fn detect_dotnet_version(verbose: u32) -> f32 {
     ver
 }
 
-fn display_version() {
-    println!("dotnetdetect v0.1.0");
-    exit(0);
-}
-
 fn is_required_dotnet(req: f32, verbose: u32) -> i32 {
     let mut ec = -1 as i32;
     let ver = detect_dotnet_version(verbose);
@@ -56,6 +51,11 @@ fn is_required_dotnet(req: f32, verbose: u32) -> i32 {
         println!("Does not meet required version => {}", req);
     }
     ec
+}
+
+fn display_version() {
+    println!("dotnetdetect v0.1.0");
+    exit(0);
 }
 
 fn display_usage(program: &str) {
