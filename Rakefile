@@ -22,6 +22,8 @@ end
 task :test do
     sh "#{target} --help"
     puts ""
+    sh "#{target} --version"
+    puts ""
     sh "#{target}"
     puts ""
     sh "#{target} --required 4.5"
